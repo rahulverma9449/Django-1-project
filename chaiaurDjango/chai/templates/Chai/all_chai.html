@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Health Page{% endblock %}
+
+{% block content %}
+<h1 class="bg-white text-center font-extrabold">Stay with healthy code</h1>
+<div class="grid grid-cols-3 gap-4 m-4">
+
+{% for chai in chais %}
+<div class="chai-item bg-grey-500 p-5">
+    <img class="rounded-lg" src="{{ chai.image.url }}" alt="{{ chai.name }}">
+    <div class="bg-blue-900 rounded">
+    <h3 class="font-bold">{{ chai.name }}</h3>
+    <a href="{% url 'chai_detail' chai.id %}" class="inline-block">
+        <button type="button" 
+            class="px-4 py-2 bg-green-600 w-96 text-white font-semibold rounded-lg shadow-md 
+                   hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 
+                   focus:ring-opacity-75 transition duration-300">
+            {{ chai.type }} - {{ chai.id }}
+        </button>
+    </a>
+    <p ><strong>Price:</strong> ${{ chai.price }}</p>
+    <p><strong>Taste Rating:</strong> {{ chai.taste_rating }} 4.5/ 5</p>
+</div>
+</div>
+{% endfor %}
+</div> 
+
+{% endblock %}
+
+
+

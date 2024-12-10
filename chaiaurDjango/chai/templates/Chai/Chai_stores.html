@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Find Tea in Stores
+{% endblock %}
+
+{% block content %}
+ Test content fopr forms
+
+ <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="bg-blue-700" type="submit">Submit</button>
+</form>
+    {% if stores %}
+    <h2>Stores near you:</h2>
+ <ul>
+    {% for store in stores %} 
+    <li>{{store.name}} - {{store.location}}</li>
+    {% endfor  %}
+ </ul>
+    
+            
+    {% endif %} 
+ 
+{% endblock %}

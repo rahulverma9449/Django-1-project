@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  },
+  "dependencies": {
+    "@jridgewell/gen-mapping": "^0.3.6"
+  },
+  "name": "chaiaurdjango",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
